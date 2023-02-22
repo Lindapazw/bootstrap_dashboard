@@ -40,3 +40,9 @@ a:hover {
 .btn-search {
     right: 5px;
 }
+
+/* user */
+
+.user {
+    max-width: 30px;
+}
