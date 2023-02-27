@@ -15,6 +15,8 @@ a:hover {
     text-decoration: none;
 }
 
+/* clases sobreescritas */
+
 .bg-primary {
     background-color: var(--primary) !important;
 }
@@ -22,6 +24,20 @@ a:hover {
 .bg-light {
     background-color: var(--light) !important; 
 }
+
+.btn{
+    border: 0;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+}
+
+/* fin clases sobreescritas */
 
 #sidebar-container {
     min-height: 100vh;
@@ -45,4 +61,10 @@ a:hover {
 
 .user {
     max-width: 30px;
+}
+
+#content {
+    overflow-y: auto;
+    height: 100vh;
+    padding-top: ;
 }
