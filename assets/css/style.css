@@ -41,6 +41,10 @@ a:hover {
     background: linear-gradient(180deg, var(--light) 50%, var(--grey) 0);
 }
 
+.bg-grey{
+    background-color: var(--grey);
+}
+
 /* fin clases sobreescritas */
 
 #sidebar-container {
