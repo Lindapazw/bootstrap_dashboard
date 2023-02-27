@@ -37,6 +37,10 @@ a:hover {
     background-color: var(--primary);
 }
 
+.bg-mix {
+    background: linear-gradient(180deg, var(--light) 50%, var(--grey) 0);
+}
+
 /* fin clases sobreescritas */
 
 #sidebar-container {
@@ -67,4 +71,10 @@ a:hover {
     overflow-y: auto;
     height: 100vh;
     padding-top: 5rem;
+}
+
+/* stat*/
+
+.stat{
+    border-right: 1px solid var(--grey);
 }
