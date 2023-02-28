@@ -56,7 +56,7 @@ a:hover {
 }
 
 #sidebar-container .menu {
-    width: 18rem;
+    width: 16rem;
 }
 
 /* boton search */
@@ -81,4 +81,12 @@ a:hover {
 
 .stat{
     border-right: 1px solid var(--grey);
+}
+
+.acivo {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.menu a:hover{
+    background-color: rgba(255, 255, 255, .1);
 }

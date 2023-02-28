@@ -19,7 +19,10 @@
         <!-- css -->
         <link rel="stylesheet" href="assets/css/style.css">
 
-        <title>Bootstrap</title>
+        <!-- charts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+
+        <title>CPPS</title>
     </head>
 
     <body>
@@ -31,7 +34,7 @@
                     <h4 class="text-light font-weight-bold">CPPS</h4>
                 </div>
                 <div class="menu">
-                    <a href="#" class="d-block p-3 text-light"><i class="icon ion-md-apps mr-2 lead"></i>Tablero</a>
+                    <a href="#" class="d-block p-3 text-light acivo"><i class="icon ion-md-apps mr-2 lead "></i>Tablero</a>
                     <a href="#" class="d-block p-3 text-light"><i class="icon ion-md-people mr-2 lead"></i>Usuario</a>
                     <a href="#" class="d-block p-3 text-light"><i class="icon ion-md-stats mr-2 lead"></i>Estadistica</a>
                     <a href="#" class="d-block p-3 text-light"><i class="icon ion-md-person mr-2 lead"></i>Perfil</a>
@@ -123,8 +126,9 @@
                             <div class="row">
                                 <div class="col-lg-8 my-3">
                                     <div class="card rounded-0">
-                                        <div class="card-header">
-                                            <h6>Número de usuarios de paga</h6>
+                                        <div class="card-header bg-light">
+                                            <h6 class="font-weight-bold mb-0">Número de usuarios de paga</h6>
+                                            <canvas id="myChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -141,6 +145,7 @@
         <!-- Optional JavaScript; choose one of the two! -->
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
         <!-- Option 2: Separate Popper and Bootstrap JS -->
@@ -151,5 +156,33 @@
         -->
 
         <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+        <script>
+            var ctx= document.getElementById("myChart").getContext("2d");
+            var myChart= new Chart(ctx,{
+                type:"bar",
+                data:{
+                    labels:['col1','col2','col3','col4'],
+                    datasets:[{
+                            label:'Num datos',
+                            data:[10,9,15,20],
+                            backgroundColor:[
+                                'rgb(66, 134, 244,0.8)',
+                                'rgb(74, 135, 72,0.8)',
+                                'rgb(229, 89, 50,0.8)'
+                            ]
+                    }]
+                },
+                options:{
+                    scales:{
+                        yAxes:[{
+                                ticks:{
+                                    beginAtZero:true
+                                }
+                        }]
+                    }
+                }
+            });
+        </script>
     </body>
 </html>
